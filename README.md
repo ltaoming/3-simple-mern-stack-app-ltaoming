@@ -70,7 +70,6 @@ While you don't need to do this in order to simply run this app, here's how the 
 - start building out the rest of the code in the `src` directory
 
 ### Initial set up of Express.js back end
->>>>>>> upstream/master
 
 - go into the main project folder and...
 - `mkdir back-end` to create a folder that will hold the back-end code
