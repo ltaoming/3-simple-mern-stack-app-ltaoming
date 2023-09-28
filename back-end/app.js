@@ -78,5 +78,41 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/aboutus', async (req, res) => {
+  try {
+    res.json({
+      intro:
+        "Hello, my name is Jalen Zhang and I'm currently a senior pursuing a major in computer science.  I'm an avid soccer player. Soccer is not just a sport for me; it's a perfect blend of teamwork, strategy, and physical exercise that keeps me balanced. It also parallels my love for collaboration and strategy, values that I bring into my computer science projects. When I'm not coding or playing soccer, I often find solace in music. My musical tastes are quite eclectic, ranging from classical symphonies that calm the mind to modern pop music that energizes the soul. I'm also an enthusiastic gamer and my favorite game to play is Genshin Impact. Gaming provides another avenue for me to strategize and solve problems, albeit in a different context than what I encounter in my computer science studies. Looking ahead, I'm truly excited about future collaborations with my teammates on projects that will not only put our technical skills to the test but also require us to be creative.",
+      imageUrl: '/static/image.jpg',
+    })
+  } catch (err) {
+    console.error(err)
+    res.status(400).json({
+      error: err,
+      status: 'failed to retrieve information',
+    })
+  }
+})
+
+// app.get('/aboutus', async (req, res) => {
+//   // load all messages from database
+//   try {
+//     res.json({
+//       intro: [
+//         "Hi!",
+//         "My name is Taoming Liu. I am a senior student at CAS majoring in Computer Science and Math",
+//         "About me: I am born and raised in Beijing, China. I like playing basketball and video games. I play a lot CSGO although the game has officially down today.'"
+//       ],
+//     })
+//     imageURL: "/static/MyPhoto.jpg"
+//   } catch (err) {
+//     console.error(err)
+//     res.status(400).json({
+//       error: err,
+//       status: 'failed to retrieve messages from the database',
+//     })
+//   }
+// })
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
