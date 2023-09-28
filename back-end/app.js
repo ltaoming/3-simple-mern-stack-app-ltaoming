@@ -82,7 +82,7 @@ app.get('/aboutus', async (req, res) => {
   try {
     res.json({
       intro: "Hello, my name is Taoming Liu.",
-      imageUrl: '/public/MyPhoto.jpg',
+      imageUrl: 'http://localhost:7002/MyPhoto.jpg',
     })
   } catch (err) {
     console.error(err)
