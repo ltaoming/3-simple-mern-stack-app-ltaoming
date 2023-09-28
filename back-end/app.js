@@ -81,8 +81,8 @@ app.post('/messages/save', async (req, res) => {
 app.get('/aboutus', async (req, res) => {
   try {
     res.json({
-      intro: "Hello, my name is Taoming Liu.",
-      imageUrl: 'http://localhost:7002/MyPhoto.jpg',
+      intro: 'Hello, my name is Taoming Liu.',
+      imageUrl: 'static/MyPhoto.jpg',
     })
   } catch (err) {
     console.error(err)
